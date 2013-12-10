@@ -1,16 +1,14 @@
 # The Quality of Government data as qoogleVis Motion Chart
 
-## All the countries and all the variables from 2000 onwards
+Two different dataset are visualised in this demo.
 
-- [The Standard data](http://muuankarski.github.io/QogGVis/motionStandard.html)
-- [The Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicy.html)
+1. [QoG Standard Data](http://www.qog.pol.gu.se/data/datadownloads/qogstandarddata/) (see [codebook](http://www.qogdata.pol.gu.se/codebook/codebook_standard_15may13.pdf))
+2. [QoG Social Policy Data](http://www.qog.pol.gu.se/data/datadownloads/qogsocialpolicydata/) (see [codebook](http://www.qogdata.pol.gu.se/codebook/codebook_social_4apr12.pdf))
 
-## Post-socialist space from 1990 onwards
+See also R-package [rQog](https://github.com/muuankarski/rQog) for accessing the data through R.
 
-- [The Standard data](http://muuankarski.github.io/QogGVis/motionStandardPostS.html)
-- [The Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyPostS.html)
-
-## European Union from 1990 onwards
-
-- [The Standard data](http://muuankarski.github.io/QogGVis/motionStandardEu.html)
-- [The Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html)
+| All countries 2000 onwards | Post-socialist space 1990 onwards | EU27 1990 onwards |
+| -------------------------- | --------------------------------- | ----------------- |
+| [Standard data](http://muuankarski.github.io/QogGVis/motionStandard.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicy.html)|
+| [Standard data](http://muuankarski.github.io/QogGVis/motionStandardPostS.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyPostS.html) |
+| [Standard data](http://muuankarski.github.io/QogGVis/motionStandardEu.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html) |

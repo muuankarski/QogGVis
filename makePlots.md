@@ -22,15 +22,15 @@ datSPmot <- datSP[, c(-1, -4, -5, -6, -7, -8)]
 datSmot2 <- datSmot[datSmot$year >= 2000, ]
 library(googleVis)
 motionStandard <- gvisMotionChart(datSmot2, idvar = "cname", timevar = "year", 
-    xvar = "mad_gdppc", yvar = "undp_hdi", sizevar = "mad_pop", options = list(height = 900, 
-        width = 1100))
+    xvar = "mad_gdppc", yvar = "undp_hdi", colorvar = "fh_pr", sizevar = "mad_pop", 
+    options = list(height = 900, width = 1100))
 ## Save
 print(motionStandard, file = "motionStandard.html")
 ## plot
 datSPmot2 <- datSmot[datSPmot$year >= 2000, ]
 motionSocialPolicy <- gvisMotionChart(datSPmot2, idvar = "cname", timevar = "year", 
-    xvar = "wdi_gdp", yvar = "wdi_gini", sizevar = "wdi_pop", options = list(height = 900, 
-        width = 1100))
+    xvar = "wdi_gdp", yvar = "wdi_gini", colorvar = "fh_pr", sizevar = "wdi_pop", 
+    options = list(height = 900, width = 1100))
 ## Save
 print(motionSocialPolicy, file = "motionSocialPolicy.html")
 ```
@@ -55,16 +55,16 @@ datSmot2 <- datSmot[datSmot$year >= 1990, ]
 datSmot3 <- datSmot2[datSmot2$cname %in% clist, ]
 library(googleVis)
 motionStandardPostS <- gvisMotionChart(datSmot3, idvar = "cname", timevar = "year", 
-    xvar = "mad_gdppc", yvar = "undp_hdi", sizevar = "mad_pop", options = list(height = 900, 
-        width = 1100))
+    xvar = "mad_gdppc", yvar = "undp_hdi", sizevar = "mad_pop", colorvar = "fh_pr", 
+    options = list(height = 900, width = 1100))
 ## Save
 print(motionStandardPostS, file = "motionStandardPostS.html")
 ## plot
 datSPmot2 <- datSPmot[datSPmot$year >= 1990, ]
 datSPmot3 <- datSPmot2[datSPmot2$cname %in% clist, ]
 motionSocialPolicyPostS <- gvisMotionChart(datSPmot3, idvar = "cname", timevar = "year", 
-    xvar = "wdi_gdp", yvar = "wdi_gini", sizevar = "wdi_pop", options = list(height = 900, 
-        width = 1100))
+    xvar = "wdi_gdp", yvar = "wdi_gini", sizevar = "wdi_pop", colorvar = "fh_pr", 
+    options = list(height = 900, width = 1100))
 ## Save
 print(motionSocialPolicyPostS, file = "motionSocialPolicyPostS.html")
 ```
@@ -89,16 +89,16 @@ datSmot2 <- datSmot[datSmot$year >= 1990, ]
 datSmot3 <- datSmot2[datSmot2$cname %in% clistEu, ]
 library(googleVis)
 motionStandardEu <- gvisMotionChart(datSmot3, idvar = "cname", timevar = "year", 
-    xvar = "mad_gdppc", yvar = "undp_hdi", sizevar = "mad_pop", options = list(height = 900, 
-        width = 1100))
+    xvar = "mad_gdppc", yvar = "undp_hdi", colorvar = "fh_pr", sizevar = "mad_pop", 
+    options = list(height = 900, width = 1100))
 ## Save
 print(motionStandardEu, file = "motionStandardEu.html")
 ## plot
 datSPmot2 <- datSPmot[datSPmot$year >= 1990, ]
 datSPmot3 <- datSPmot2[datSPmot2$cname %in% clistEu, ]
 motionSocialPolicyEu <- gvisMotionChart(datSPmot3, idvar = "cname", timevar = "year", 
-    xvar = "wdi_gdp", yvar = "wdi_gini", sizevar = "wdi_pop", options = list(height = 900, 
-        width = 1100))
+    xvar = "wdi_gdp", yvar = "wdi_gini", colorvar = "fh_pr", sizevar = "wdi_pop", 
+    options = list(height = 900, width = 1100))
 ## Save
 print(motionSocialPolicyEu, file = "motionSocialPolicyEu.html")
 ```
