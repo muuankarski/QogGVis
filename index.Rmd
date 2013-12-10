@@ -7,10 +7,10 @@
 
 ## Post-socialist space from 1990 onwards
 
-- [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionStandardPostS.html)
-- [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionSocialPolicyPostS.html)
+- [The Standard data](http://muuankarski.github.io/QogGVis/motionStandardPostS.html)
+- [The Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyPostS.html)
 
 ## European Union from 1990 onwards
 
-- [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionStandardEu.html)
-- [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html)
+- [The Standard data](http://muuankarski.github.io/QogGVis/motionStandardEu.html)
+- [The Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html)
