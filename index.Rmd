@@ -1,20 +1,20 @@
 # The Standard data
-# -----------------------------------------------------
+
 ## Load the .csv and exclude so id vars
 
-```{r}
+```{r, cache=TRUE}
 datS <- read.csv("http://www.qogdata.pol.gu.se/data/qog_std_ts_15may13.csv",  sep = ";")
 datSmot <- datS[,c(-1,-4,-5,-6,-7,-8,-9)]
 ```
 
 ## Subset the data for smoother rendering in browser
 ### Only the years after 1990
-```{r}
+```{r, cache=TRUE}
 datSmot2 <- datSmot[datSmot$year >= 2000, ]
 ```
 
 ## Generate the Motion Chart and save it
-```{r}
+```{r, cache=TRUE}
 library(googleVis)
 motionStandard <- gvisMotionChart(datSmot2, idvar="cname",
                               timevar="year",
@@ -26,12 +26,12 @@ motionStandard <- gvisMotionChart(datSmot2, idvar="cname",
 print(motionStandard, file="motionStandard.html")
 ```
 
-- (Click here to browse the motion chart)[motionStandard.html]
+- [Click here to browse the motion chart](motionStandard.html)
 
 
 # The social policy data
 
-```{r}
+```{r, cache=TRUE}
 datSP <- read.csv("http://www.qogdata.pol.gu.se/data/qog_soc_tsl_4apr12.csv",  sep = ";")
 datSPmot <- datSP[,c(-1,-4,-5,-6,-7,-8)]
 ```
@@ -39,12 +39,12 @@ datSPmot <- datSP[,c(-1,-4,-5,-6,-7,-8)]
 
 ## Subset the data for smoother rendering in browser
 ### Only the years after 1990
-```{r}
+```{r, cache=TRUE}
 datSPmot2 <- datSPmot[datSPmot$year >= 2000, ]
 ```
 
 ## Generate the Motion Chart and save it
-```{r}
+```{r, cache=TRUE}
 library(googleVis)
 motionSocialPolicy <- gvisMotionChart(datSPmot2, idvar="cname",
                                       timevar="year",
@@ -56,4 +56,4 @@ motionSocialPolicy <- gvisMotionChart(datSPmot2, idvar="cname",
 print(motionSocialPolicy, file="motionSocialPolicy.html")
 ```
 
-- (Click here to browse the motion chart)[motionSocialPolicy.html]
+- [Click here to browse the motion chart](motionSocialPolicy.html)

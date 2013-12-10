@@ -347,39 +347,36 @@ th:last-child {
 <ul>
 <li>
 <a href="#toc_0">The Standard data</a>
-</li>
-<li>
-<a href="#toc_1">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</a>
 <ul>
 <li>
-<a href="#toc_2">Load the .csv and exclude so id vars</a>
+<a href="#toc_1">Load the .csv and exclude so id vars</a>
 </li>
 <li>
-<a href="#toc_3">Subset the data for smoother rendering in browser</a>
+<a href="#toc_2">Subset the data for smoother rendering in browser</a>
 <ul>
 <li>
-<a href="#toc_4">Only the years after 1990</a>
+<a href="#toc_3">Only the years after 1990</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_5">Generate the Motion Chart and save it</a>
+<a href="#toc_4">Generate the Motion Chart and save it</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_6">The social policy data</a>
+<a href="#toc_5">The social policy data</a>
 <ul>
 <li>
-<a href="#toc_7">Subset the data for smoother rendering in browser</a>
+<a href="#toc_6">Subset the data for smoother rendering in browser</a>
 <ul>
 <li>
-<a href="#toc_8">Only the years after 1990</a>
+<a href="#toc_7">Only the years after 1990</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_9">Generate the Motion Chart and save it</a>
+<a href="#toc_8">Generate the Motion Chart and save it</a>
 </li>
 </ul>
 </li>
@@ -389,88 +386,60 @@ th:last-child {
 
 <h1 id="toc_0">The Standard data</h1>
 
-<h1 id="toc_1">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</h1>
-
-<h2 id="toc_2">Load the .csv and exclude so id vars</h2>
+<h2 id="toc_1">Load the .csv and exclude so id vars</h2>
 
 <pre><code class="r">datS &lt;- read.csv(&quot;http://www.qogdata.pol.gu.se/data/qog_std_ts_15may13.csv&quot;, 
     sep = &quot;;&quot;)
 datSmot &lt;- datS[, c(-1, -4, -5, -6, -7, -8, -9)]
 </code></pre>
 
-<h2 id="toc_3">Subset the data for smoother rendering in browser</h2>
+<h2 id="toc_2">Subset the data for smoother rendering in browser</h2>
 
-<h3 id="toc_4">Only the years after 1990</h3>
+<h3 id="toc_3">Only the years after 1990</h3>
 
 <pre><code class="r">datSmot2 &lt;- datSmot[datSmot$year &gt;= 2000, ]
 </code></pre>
 
-<h2 id="toc_5">Generate the Motion Chart and save it</h2>
+<h2 id="toc_4">Generate the Motion Chart and save it</h2>
 
 <pre><code class="r">library(googleVis)
-</code></pre>
-
-<pre><code>## Error: there is no package called &#39;googleVis&#39;
-</code></pre>
-
-<pre><code class="r">motionStandard &lt;- gvisMotionChart(datSmot2, idvar = &quot;cname&quot;, timevar = &quot;year&quot;, 
+motionStandard &lt;- gvisMotionChart(datSmot2, idvar = &quot;cname&quot;, timevar = &quot;year&quot;, 
     xvar = &quot;mad_gdppc&quot;, yvar = &quot;undp_hdi&quot;, sizevar = &quot;mad_pop&quot;, options = list(height = 900, 
         width = 1100))
-</code></pre>
-
-<pre><code>## Error: could not find function &quot;gvisMotionChart&quot;
-</code></pre>
-
-<pre><code class="r">## Save
+## Save
 print(motionStandard, file = &quot;motionStandard.html&quot;)
 </code></pre>
 
-<pre><code>## Error: object &#39;motionStandard&#39; not found
-</code></pre>
-
 <ul>
-<li>(Click here to browse the motion chart)[motionStandard.html]</li>
+<li><a href="motionStandard.html">Click here to browse the motion chart</a></li>
 </ul>
 
-<h1 id="toc_6">The social policy data</h1>
+<h1 id="toc_5">The social policy data</h1>
 
 <pre><code class="r">datSP &lt;- read.csv(&quot;http://www.qogdata.pol.gu.se/data/qog_soc_tsl_4apr12.csv&quot;, 
     sep = &quot;;&quot;)
 datSPmot &lt;- datSP[, c(-1, -4, -5, -6, -7, -8)]
 </code></pre>
 
-<h2 id="toc_7">Subset the data for smoother rendering in browser</h2>
+<h2 id="toc_6">Subset the data for smoother rendering in browser</h2>
 
-<h3 id="toc_8">Only the years after 1990</h3>
+<h3 id="toc_7">Only the years after 1990</h3>
 
 <pre><code class="r">datSPmot2 &lt;- datSPmot[datSPmot$year &gt;= 2000, ]
 </code></pre>
 
-<h2 id="toc_9">Generate the Motion Chart and save it</h2>
+<h2 id="toc_8">Generate the Motion Chart and save it</h2>
 
 <pre><code class="r">library(googleVis)
-</code></pre>
-
-<pre><code>## Error: there is no package called &#39;googleVis&#39;
-</code></pre>
-
-<pre><code class="r">motionSocialPolicy &lt;- gvisMotionChart(datSPmot2, idvar = &quot;cname&quot;, timevar = &quot;year&quot;, 
+motionSocialPolicy &lt;- gvisMotionChart(datSPmot2, idvar = &quot;cname&quot;, timevar = &quot;year&quot;, 
     xvar = &quot;wdi_gdp&quot;, yvar = &quot;wdi_gini&quot;, sizevar = &quot;wdi_pop&quot;, options = list(height = 900, 
         width = 1100))
-</code></pre>
-
-<pre><code>## Error: could not find function &quot;gvisMotionChart&quot;
-</code></pre>
-
-<pre><code class="r">## Save
+## Save
 print(motionSocialPolicy, file = &quot;motionSocialPolicy.html&quot;)
 </code></pre>
 
-<pre><code>## Error: object &#39;motionSocialPolicy&#39; not found
-</code></pre>
-
 <ul>
-<li>(Click here to browse the motion chart)[motionSocialPolicy.html]</li>
+<li><a href="motionSocialPolicy.html">Click here to browse the motion chart</a></li>
 </ul>
 
 </body>

@@ -1,5 +1,5 @@
 # The Standard data
-# -----------------------------------------------------
+
 ## Load the .csv and exclude so id vars
 
 
@@ -22,33 +22,15 @@ datSmot2 <- datSmot[datSmot$year >= 2000, ]
 
 ```r
 library(googleVis)
-```
-
-```
-## Error: there is no package called 'googleVis'
-```
-
-```r
 motionStandard <- gvisMotionChart(datSmot2, idvar = "cname", timevar = "year", 
     xvar = "mad_gdppc", yvar = "undp_hdi", sizevar = "mad_pop", options = list(height = 900, 
         width = 1100))
-```
-
-```
-## Error: could not find function "gvisMotionChart"
-```
-
-```r
 ## Save
 print(motionStandard, file = "motionStandard.html")
 ```
 
-```
-## Error: object 'motionStandard' not found
-```
 
-
-- (Click here to browse the motion chart)[motionStandard.html]
+- [Click here to browse the motion chart](motionStandard.html)
 
 
 # The social policy data
@@ -74,30 +56,12 @@ datSPmot2 <- datSPmot[datSPmot$year >= 2000, ]
 
 ```r
 library(googleVis)
-```
-
-```
-## Error: there is no package called 'googleVis'
-```
-
-```r
 motionSocialPolicy <- gvisMotionChart(datSPmot2, idvar = "cname", timevar = "year", 
     xvar = "wdi_gdp", yvar = "wdi_gini", sizevar = "wdi_pop", options = list(height = 900, 
         width = 1100))
-```
-
-```
-## Error: could not find function "gvisMotionChart"
-```
-
-```r
 ## Save
 print(motionSocialPolicy, file = "motionSocialPolicy.html")
 ```
 
-```
-## Error: object 'motionSocialPolicy' not found
-```
 
-
-- (Click here to browse the motion chart)[motionSocialPolicy.html]
+- [Click here to browse the motion chart](motionSocialPolicy.html)
