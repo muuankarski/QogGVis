@@ -1,103 +1,14 @@
-# The Standard data
-# -----------------------------------------------------
-## Load the .csv and exclude so id vars
+<h1 class="title">The Quality of Government data as qoogleVis Motion Chart</h1>
+
+Two different dataset are visualised in this demo:
+
+1. [QoG Standard Data](http://www.qog.pol.gu.se/data/datadownloads/qogstandarddata/) (see [codebook](http://www.qogdata.pol.gu.se/codebook/codebook_standard_15may13.pdf) as there are ~750 variables available)
+2. [QoG Social Policy Data](http://www.qog.pol.gu.se/data/datadownloads/qogsocialpolicydata/) (see [codebook](http://www.qogdata.pol.gu.se/codebook/codebook_social_4apr12.pdf) as there are ~1000 variables available)
 
 
-```r
-datS <- read.csv("http://www.qogdata.pol.gu.se/data/qog_std_ts_15may13.csv", 
-    sep = ";")
-datSmot <- datS[, c(-1, -4, -5, -6, -7, -8, -9)]
-```
+See also R-package [rQog](https://github.com/muuankarski/rQog) for accessing the data through R.
 
-
-## Subset the data for smoother rendering in browser
-### Only the years after 1990
-
-```r
-datSmot2 <- datSmot[datSmot$year >= 2000, ]
-```
-
-
-## Generate the Motion Chart and save it
-
-```r
-library(googleVis)
-```
-
-```
-## Error: there is no package called 'googleVis'
-```
-
-```r
-motionStandard <- gvisMotionChart(datSmot2, idvar = "cname", timevar = "year", 
-    xvar = "mad_gdppc", yvar = "undp_hdi", sizevar = "mad_pop", options = list(height = 900, 
-        width = 1100))
-```
-
-```
-## Error: could not find function "gvisMotionChart"
-```
-
-```r
-## Save
-print(motionStandard, file = "motionStandard.html")
-```
-
-```
-## Error: object 'motionStandard' not found
-```
-
-
-- (Click here to browse the motion chart)[motionStandard.html]
-
-
-# The social policy data
-
-
-```r
-datSP <- read.csv("http://www.qogdata.pol.gu.se/data/qog_soc_tsl_4apr12.csv", 
-    sep = ";")
-datSPmot <- datSP[, c(-1, -4, -5, -6, -7, -8)]
-```
-
-
-
-## Subset the data for smoother rendering in browser
-### Only the years after 1990
-
-```r
-datSPmot2 <- datSPmot[datSPmot$year >= 2000, ]
-```
-
-
-## Generate the Motion Chart and save it
-
-```r
-library(googleVis)
-```
-
-```
-## Error: there is no package called 'googleVis'
-```
-
-```r
-motionSocialPolicy <- gvisMotionChart(datSPmot2, idvar = "cname", timevar = "year", 
-    xvar = "wdi_gdp", yvar = "wdi_gini", sizevar = "wdi_pop", options = list(height = 900, 
-        width = 1100))
-```
-
-```
-## Error: could not find function "gvisMotionChart"
-```
-
-```r
-## Save
-print(motionSocialPolicy, file = "motionSocialPolicy.html")
-```
-
-```
-## Error: object 'motionSocialPolicy' not found
-```
-
-
-- (Click here to browse the motion chart)[motionSocialPolicy.html]
+| All countries 2000 onwards | Post-socialist space 1990 onwards | EU27 1990 onwards |
+| -------------------------- | --------------------------------- | ----------------- |
+| [Standard data](http://muuankarski.github.io/QogGVis/motionStandard.html) | [Standard data](http://muuankarski.github.io/QogGVis/motionStandardPostS.html) | [Standard data](http://muuankarski.github.io/QogGVis/motionStandardEu.html) |
+| [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicy.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyPostS.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html) |
