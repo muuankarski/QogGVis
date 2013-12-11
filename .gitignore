@@ -2,3 +2,5 @@ knit.R
 QogGVis.Rproj
 .Rproj.user
 cache
+.RData
+.Rhistory
