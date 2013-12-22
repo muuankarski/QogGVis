@@ -16,6 +16,6 @@ See also R-package [rQog](https://github.com/muuankarski/rQog) for accessing the
 ## Google Motion Chart visualisation 
 
 | All countries 2000 onwards | Post-socialist space 1990 onwards | EU27 1990 onwards | Random 1 | 
-| -------------------------- | --------------------------------- | ----------------- |
-| [Standard data](http://muuankarski.github.io/QogGVis/motionStandard.html) | [Standard data](http://muuankarski.github.io/QogGVis/motionStandardPostS.html) | [Standard data](http://muuankarski.github.io/QogGVis/motionStandardEu.html) | --- |
+| -------------------------- | --------------------------------- | ----------------- |--------- |
+| [Standard data](http://muuankarski.github.io/QogGVis/motionStandard.html) | [Standard data](http://muuankarski.github.io/QogGVis/motionStandardPostS.html) | [Standard data](http://muuankarski.github.io/QogGVis/motionStandardEu.html) | - |
 | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicy.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyPostS.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html) | [Social Policy data](http://muuankarski.github.io/QogGVis/motionSocialPolicyExit.html | 

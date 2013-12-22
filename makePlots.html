@@ -379,6 +379,14 @@ th:last-child {
 </li>
 </ul>
 </li>
+<li>
+<a href="#toc_8">Exit/Entry selection from 1990</a>
+<ul>
+<li>
+<a href="#toc_9">Generate the Motion Chart and save it</a>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 
@@ -479,6 +487,34 @@ motionSocialPolicyEu &lt;- gvisMotionChart(datSPmot3, idvar = &quot;cname&quot;,
     options = list(height = 900, width = 1100))
 ## Save
 print(motionSocialPolicyEu, file = &quot;motionSocialPolicyEu.html&quot;)
+</code></pre>
+
+<ul>
+<li><a href="http://muuankarski.github.io/QogGVis/motionStandardEu.html">Click here to browse the motion chart</a></li>
+<li><a href="http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html">Click here to browse the motion chart</a></li>
+</ul>
+
+<h1 id="toc_8">Exit/Entry selection from 1990</h1>
+
+<h2 id="toc_9">Generate the Motion Chart and save it</h2>
+
+<pre><code class="r">clistOlli &lt;- c(&quot;Australia&quot;, &quot;Austria&quot;, &quot;Belgium&quot;, &quot;Canada&quot;, &quot;Denmark &quot;, &quot;Finland &quot;, 
+    &quot;France&quot;, &quot;Germany&quot;, &quot;Ireland&quot;, &quot;Italy&quot;, &quot;Japan&quot;, &quot;Netherlands&quot;, &quot;New Zealand&quot;, 
+    &quot;Norway&quot;, &quot;Sweden&quot;, &quot;Switzerland&quot;, &quot;United Kingdom&quot;, &quot;United States&quot;)
+
+# datSmot2 &lt;- datSmot[datSmot$year &gt;= 1990, ] datSmot3 &lt;-
+# datSmot2[datSmot2$cname %in% clistEu, ] library(googleVis)
+# motionStandardEu &lt;- gvisMotionChart(datSmot3, idvar=&#39;cname&#39;,
+# timevar=&#39;year&#39;, xvar=&#39;mad_gdppc&#39;, yvar=&#39;undp_hdi&#39;, colorvar=&#39;fh_pr&#39;,
+# sizevar=&#39;mad_pop&#39;, options=list(height=900, width=1100)) ## Save
+# print(motionStandardEu, file=&#39;motionStandardEu.html&#39;) plot
+datSPmot2 &lt;- datSPmot[datSPmot$year &gt;= 1980, ]
+datSPmot3 &lt;- datSPmot2[datSPmot2$cname %in% clistOlli, ]
+motionSocialPolicyExit &lt;- gvisMotionChart(datSPmot3, idvar = &quot;cname&quot;, timevar = &quot;year&quot;, 
+    xvar = &quot;wdi_gdp&quot;, yvar = &quot;wdi_gini&quot;, colorvar = &quot;fh_pr&quot;, sizevar = &quot;wdi_pop&quot;, 
+    options = list(height = 900, width = 1100))
+## Save
+print(motionSocialPolicyExit, file = &quot;motionSocialPolicyExit.html&quot;)
 </code></pre>
 
 <ul>
