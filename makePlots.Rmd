@@ -129,3 +129,43 @@ print(motionSocialPolicyEu, file="motionSocialPolicyEu.html")
 
 - [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionStandardEu.html)
 - [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html)
+
+# Exit/Entry selection from 1990
+
+## Generate the Motion Chart and save it
+```{r, cache=TRUE}
+clistOlli <- c("Australia","Austria","Belgium",
+             "Canada","Denmark ","Finland ",
+             "France","Germany","Ireland",
+             "Italy","Japan","Netherlands",
+             "New Zealand","Norway","Sweden",
+             "Switzerland","United Kingdom","United States")
+
+# datSmot2 <- datSmot[datSmot$year >= 1990, ]
+# datSmot3 <- datSmot2[datSmot2$cname %in% clistEu, ]
+# library(googleVis)
+# motionStandardEu <- gvisMotionChart(datSmot3, idvar="cname",
+#                               timevar="year",
+#                               xvar="mad_gdppc",
+#                               yvar="undp_hdi",
+#                               colorvar="fh_pr",
+#                               sizevar="mad_pop",
+#                               options=list(height=900, width=1100))
+# ## Save
+# print(motionStandardEu, file="motionStandardEu.html")
+## plot
+datSPmot2 <- datSPmot[datSPmot$year >= 1980, ]
+datSPmot3 <- datSPmot2[datSPmot2$cname %in% clistOlli, ]
+motionSocialPolicyExit <- gvisMotionChart(datSPmot3, idvar="cname",
+                                      timevar="year",
+                                      xvar="wdi_gdp",
+                                      yvar="wdi_gini",
+                                      colorvar="fh_pr",
+                                      sizevar="wdi_pop",
+                                      options=list(height=900, width=1100))
+## Save
+print(motionSocialPolicyExit, file="motionSocialPolicyExit.html")
+```
+
+- [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionStandardEu.html)
+- [Click here to browse the motion chart](http://muuankarski.github.io/QogGVis/motionSocialPolicyEu.html)
