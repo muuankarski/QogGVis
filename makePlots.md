@@ -126,7 +126,7 @@ clistOlli <- c("Australia", "Austria", "Belgium", "Canada", "Denmark ", "Finland
 datSPmot2 <- datSPmot[datSPmot$year >= 1980, ]
 datSPmot3 <- datSPmot2[datSPmot2$cname %in% clistOlli, ]
 motionSocialPolicyExit <- gvisMotionChart(datSPmot3, idvar = "cname", timevar = "year", 
-    xvar = "wdi_gdp", yvar = "wdi_gini", colorvar = "fh_pr", sizevar = "wdi_pop", 
+    xvar = "socx_hput", yvar = "wdi_lifexp", colorvar = "cname", sizevar = "wdi_pop", 
     options = list(height = 900, width = 1100))
 ## Save
 print(motionSocialPolicyExit, file = "motionSocialPolicyExit.html")

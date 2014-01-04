@@ -511,7 +511,7 @@ print(motionSocialPolicyEu, file = &quot;motionSocialPolicyEu.html&quot;)
 datSPmot2 &lt;- datSPmot[datSPmot$year &gt;= 1980, ]
 datSPmot3 &lt;- datSPmot2[datSPmot2$cname %in% clistOlli, ]
 motionSocialPolicyExit &lt;- gvisMotionChart(datSPmot3, idvar = &quot;cname&quot;, timevar = &quot;year&quot;, 
-    xvar = &quot;wdi_gdp&quot;, yvar = &quot;wdi_gini&quot;, colorvar = &quot;fh_pr&quot;, sizevar = &quot;wdi_pop&quot;, 
+    xvar = &quot;socx_hput&quot;, yvar = &quot;wdi_lifexp&quot;, colorvar = &quot;cname&quot;, sizevar = &quot;wdi_pop&quot;, 
     options = list(height = 900, width = 1100))
 ## Save
 print(motionSocialPolicyExit, file = &quot;motionSocialPolicyExit.html&quot;)
